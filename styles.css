@@ -1,0 +1,49 @@
+/* Reset some default margin and padding */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the body */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style the main content */
+main {
+    margin: 20px;
+}
+
+/* Style the sections */
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style headings */
+h1, h2 {
+    color: #333;
+}
+
+/* Style the paragraph text */
+p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Style the list */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
