@@ -5,7 +5,7 @@ Resources:
   MyCloudWatchDashboard:
     Type: 'AWS::CloudWatch::Dashboard'
     Properties:
-      DashboardName: CustomDashboard
+      DashboardName: ArunaCustomDashboard
       DashboardBody: !Sub |
         {
           "widgets": [
@@ -17,7 +17,7 @@ Resources:
               "height": 6,
               "properties": {
                 "metrics": [
-                  ["AWS/EC2", "CPUUtilization", "InstanceId", "i-09118bf2e3a4303f1"]
+                  ["AWS/EC2", "CPUUtilization", "InstanceId", "i-0279ff403135dd46d"]
                 ],
                 "view": "timeSeries",
                 "region": "ap-south-1",
@@ -32,8 +32,8 @@ Resources:
               "height": 6,
               "properties": {
                 "metrics": [
-                  ["AWS/EC2", "NetworkIn", "InstanceId", "i-09118bf2e3a4303f1"],
-                  ["AWS/EC2", "NetworkOut", "InstanceId", "i-09118bf2e3a4303f1"]
+                  ["AWS/EC2", "NetworkIn", "InstanceId", "i-0279ff403135dd46d"],
+                  ["AWS/EC2", "NetworkOut", "InstanceId", "i-0279ff403135dd46d"]
                 ],
                 "view": "timeSeries",
                 "region": "ap-south-1",
@@ -47,13 +47,18 @@ Resources:
               "width": 12,
               "height": 6,
               "properties": {
-                "metrics": [
-                  ["AWS/EC2", "DiskReadBytes", "InstanceId", "i-09118bf2e3a4303f1"],
-                  ["AWS/EC2", "DiskWriteBytes", "InstanceId", "i-09118bf2e3a4303f1"]
-                ],
-                "view": "timeSeries",
+                "view": "singleValue",
+                "stacked": false,
                 "region": "ap-south-1",
-                "title": "EC2 Disk I/O"
+                "period": 900,
+                "stat": "Average",
+                "title": "Number of Objects in teambucketsonix",
+                "metrics": [
+                  ["AWS/S3", "NumberOfObjects", "StorageType", "AllStorageTypes", "BucketName", "teambucketsonix", { "region": "ap-south-1" }]
+                ],
+                "start": "-PT168H",
+                "end": "P0D",
+                "setPeriodToTimeRange": true
               }
             },
             {
@@ -63,28 +68,18 @@ Resources:
               "width": 12,
               "height": 6,
               "properties": {
-                "metrics": [
-                  ["AWS/EC2", "MemoryUtilization", "InstanceId", "i-09118bf2e3a4303f1"]
-                ],
-                "view": "timeSeries",
+                "view": "singleValue",
+                "stacked": false,
                 "region": "ap-south-1",
-                "title": "EC2 Memory Utilization"
-              }
-            },
-            {
-              "type": "metric",
-              "x": 0,
-              "y": 24,
-              "width": 12,
-              "height": 6,
-              "properties": {
+                "period": 900,
+                "stat": "Average",
+                "title": "Number of Objects in cf-templates-15s5bskype21r-ap-south-1",
                 "metrics": [
-                  ["AWS/EC2", "StatusCheckFailed_Instance", "InstanceId", "i-09118bf2e3a4303f1"],
-                  ["AWS/EC2", "StatusCheckFailed_System", "InstanceId", "i-09118bf2e3a4303f1"]
+                  ["AWS/S3", "NumberOfObjects", "StorageType", "AllStorageTypes", "BucketName", "cf-templates-15s5bskype21r-ap-south-1", { "region": "ap-south-1" }]
                 ],
-                "view": "timeSeries",
-                "region": "ap-south-1",
-                "title": "EC2 Status Checks"
+                "start": "-PT168H",
+                "end": "P0D",
+                "setPeriodToTimeRange": true
               }
             },
             {
@@ -95,11 +90,14 @@ Resources:
               "height": 6,
               "properties": {
                 "metrics": [
-                  ["AWS/EC2", "InstanceCount", "InstanceId", "i-09118bf2e3a4303f1"]
+                  ["AWS/S3", "BucketSizeBytes", "StorageType", "StandardStorage", "BucketName", "teambucketsonix", { "region": "ap-south-1" }]
                 ],
-                "view": "timeSeries",
+                "view": "singleValue",
+                "stacked": false,
                 "region": "ap-south-1",
-                "title": "EC2 Instance Count"
+                "period": 86400,
+                "stat": "Average",
+                "title": "Bucket Size for teambucketsonix"
               }
             },
             {
@@ -110,11 +108,14 @@ Resources:
               "height": 6,
               "properties": {
                 "metrics": [
-                  ["AWS/S3", "AllRequests", "BucketName", "awsbucket-test01"]
+                  ["AWS/S3", "BucketSizeBytes", "StorageType", "StandardStorage", "BucketName", "cf-templates-15s5bskype21r-ap-south-1", { "region": "ap-south-1" }]
                 ],
-                "view": "timeSeries",
+                "view": "singleValue",
+                "stacked": false,
                 "region": "ap-south-1",
-                "title": "S3 Request Metrics"
+                "period": 86400,
+                "stat": "Average",
+                "title": "Bucket Size for cf-templates-15s5bskype21r-ap-south-1"
               }
             },
             {
@@ -124,12 +125,14 @@ Resources:
               "width": 12,
               "height": 6,
               "properties": {
+                "view": "singleValue",
+                "stacked": false,
                 "metrics": [
-                  ["AWS/S3", "BucketSizeBytes", "BucketName", "awsbucket-test01"]
+                  ["AWS/Cognito", "SignInSuccesses", "UserPool", "ap-south-1_rRTVTNWDU", "UserPoolClient", "691ovgsdfp9j6nllqartfk7g57", { "region": "ap-south-1" }]
                 ],
-                "view": "timeSeries",
                 "region": "ap-south-1",
-                "title": "S3 Bucket Size"
+                "period": 300,
+                "title": "Cognito SignIn Successes"
               }
             },
             {
@@ -139,43 +142,14 @@ Resources:
               "width": 12,
               "height": 6,
               "properties": {
+                "view": "singleValue",
+                "stacked": true,
                 "metrics": [
-                  ["AWS/Cognito", "SignInSuccesses", "UserPoolId", "ap-south-1_8NEN5VSG7"],
-                  ["AWS/Cognito", "SignUpSuccesses", "UserPoolId", "ap-south-1_8NEN5VSG7"]
+                  ["AWS/Cognito", "SignUpSuccesses", "UserPool", "ap-south-1_rRTVTNWDU", "UserPoolClient", "691ovgsdfp9j6nllqartfk7g57", { "region": "ap-south-1" }]
                 ],
-                "view": "timeSeries",
                 "region": "ap-south-1",
-                "title": "Cognito User Metrics"
-              }
-            },
-            {
-              "type": "metric",
-              "x": 0,
-              "y": 54,
-              "width": 12,
-              "height": 6,
-              "properties": {
-                "metrics": [
-                  ["AWS/Cognito", "UserPoolTriggers", "UserPoolId", "ap-south-1_8NEN5VSG7"]
-                ],
-                "view": "timeSeries",
-                "region": "ap-south-1",
-                "title": "Cognito User Pool Triggers"
-              }
-            },
-            {
-              "type": "metric",
-              "x": 0,
-              "y": 60,
-              "width": 12,
-              "height": 6,
-              "properties": {
-                "metrics": [
-                  ["AWS/Cognito", "FailedSignInAttempts", "UserPoolId", "ap-south-1_8NEN5VSG7"]
-                ],
-                "view": "timeSeries",
-                "region": "ap-south-1",
-                "title": "Cognito Failed Authentication Attempts"
+                "period": 300,
+                "title": "Cognito SignUp Successes"
               }
             }
           ]
