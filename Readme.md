@@ -36,6 +36,9 @@ Follow these steps to set up the authentication system and integrate it into you
 1. **AWS Cognito Configuration**:
    - Create an AWS Cognito User Pool and Identity Pool.
    - Customize the hosted UI by configuring the call by URL and signout URLs to match your project's requirements.
+  
+   - ![Alt Text](Image URL)
+
 
 2. **Custom Domain Setup**:
    - Configure a custom domain named "ivaans" to provide a branded authentication experience.
