@@ -50,6 +50,8 @@ Follow these steps to set up the authentication system and integrate it into you
 <img src="./images/WhatsApp Image 2023-08-11 at 3.58.08 PM.jpeg" width="900" height="600"/>
 <img src="./images/WhatsApp Image 2023-08-11 at 3.58.11 PM.jpeg" width="900" height="600"/>
 <img src="./images/WhatsApp Image 2023-08-11 at 3.58.12 PM.jpeg" width="900" height="600"/>
+
+
 ## Usage
 
 1. **Registration and Login**:
