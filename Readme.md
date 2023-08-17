@@ -41,13 +41,15 @@ Follow these steps to set up the authentication system and integrate it into you
 
 
 2. **Custom Domain Setup**:
-   - Configure a custom domain named "ivaans" to provide a branded authentication experience.
+   - Configure a custom domain named "ivnaas" to provide a branded authentication experience.
    - Update the necessary DNS records to map your custom domain to the AWS Cognito hosted UI.
 
 3. **HTML Pages Integration**:
    - Place the provided `index.html`, `login.html`, and `logout.html` pages in your project directory.
    - Update the Cognito configuration details (e.g., user pool ID, client ID) within the HTML pages.
-
+<img src="./images/WhatsApp Image 2023-08-11 at 3.58.08 PM.jpeg" width="900" height="600"/>
+<img src="./images/WhatsApp Image 2023-08-11 at 3.58.11 PM.jpeg" width="900" height="600"/>
+<img src="./images/WhatsApp Image 2023-08-11 at 3.58.12 PM.jpeg" width="900" height="600"/>
 ## Usage
 
 1. **Registration and Login**:
