@@ -37,7 +37,7 @@ Follow these steps to set up the authentication system and integrate it into you
    - Create an AWS Cognito User Pool and Identity Pool.
    - Customize the hosted UI by configuring the call by URL and signout URLs to match your project's requirements.
   
-<img src="./images/WhatsApp Image 2023-08-11 at 3.58.09 PM.jpeg" width="900" height="800"/>
+<img src="./images/WhatsApp Image 2023-08-11 at 3.58.09 PM.jpeg" width="900" height="600"/>
 
 
 2. **Custom Domain Setup**:
