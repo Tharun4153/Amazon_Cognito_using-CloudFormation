@@ -20,9 +20,53 @@ List any prerequisites that users need to have before they can integrate AWS Cog
 
 6. **Advanced Features (Optional)**: If your application requires more advanced features, you could briefly touch on topics like multi-factor authentication (MFA), social identity providers, and integration with other AWS services.
 
-#### Conclusion
-Wrap up the guide with a conclusion that emphasizes the benefits of using AWS Cognito for user authentication and access control. Encourage users to reach out to you or the community for further assistance.
+## Overview
 
-#### Additional Resources
-Include links to official AWS Cognito documentation, SDKs, and any other resources that might be helpful for users who want to learn more or dive deeper into specific topics.
+This project aims to provide user authentication functionality using AWS Cognito and a custom domain called "ivaans." The authentication system is integrated into a set of HTML pages, including `index.html`, `login.html`, and `logout.html`, to enhance the security and user experience of your web application.
+
+## Features
+
+- **User Authentication**: Utilize AWS Cognito's hosted UI to manage user authentication securely.
+- **Custom Domain**: Set up a custom domain, "ivaans," for a more personalized user experience.
+
+## Setup
+
+Follow these steps to set up the authentication system and integrate it into your project:
+
+1. **AWS Cognito Configuration**:
+   - Create an AWS Cognito User Pool and Identity Pool.
+   - Customize the hosted UI by configuring the call by URL and signout URLs to match your project's requirements.
+
+2. **Custom Domain Setup**:
+   - Configure a custom domain named "ivaans" to provide a branded authentication experience.
+   - Update the necessary DNS records to map your custom domain to the AWS Cognito hosted UI.
+
+3. **HTML Pages Integration**:
+   - Place the provided `index.html`, `login.html`, and `logout.html` pages in your project directory.
+   - Update the Cognito configuration details (e.g., user pool ID, client ID) within the HTML pages.
+
+## Usage
+
+1. **Registration and Login**:
+   - Users can access the login page (`login.html`) to sign in or register for an account.
+   - The hosted UI will handle the authentication process securely.
+
+2. **Authenticated Pages**:
+   - Once authenticated, users will be able to access protected parts of your web application.
+   - Integrate Cognito's authentication checks into your application logic to ensure secure access.
+
+3. **Logout**:
+   - Users can log out by visiting the `logout.html` page, which will invalidate their session.
+
+## Troubleshooting
+
+If you encounter any issues or have questions, refer to the AWS Cognito documentation for troubleshooting and further assistance.
+
+## Disclaimer
+
+Please note that this README provides a general overview of the project setup. Detailed step-by-step instructions and configurations may vary based on your specific use case and AWS setup.
+
+## Credits
+
+This project is based on AWS Cognito for user authentication. The HTML templates are adapted from [source] and customized for this project.
 
