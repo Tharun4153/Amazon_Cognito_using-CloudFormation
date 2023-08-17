@@ -57,6 +57,7 @@ Follow these steps to set up the authentication system and integrate it into you
 1. **Registration and Login**:
    - Users can access the login page (`login.html`) to sign in or register for an account.
    - The hosted UI will handle the authentication process securely.
+   - 
 
 2. **Authenticated Pages**:
    - Once authenticated, users will be able to access protected parts of your web application.
@@ -64,6 +65,7 @@ Follow these steps to set up the authentication system and integrate it into you
 
 3. **Logout**:
    - Users can log out by visiting the `logout.html` page, which will invalidate their session.
+   - __https://ivnaas.auth.ap-south-1.amazoncognito.com/logout?client_id=3a2ld1iv2t46h3o02mcc093phn&logout_uri=http%3A%2F%2Flocalhost%3A8000%2Flogout_out.html
 
 ## Troubleshooting
 
