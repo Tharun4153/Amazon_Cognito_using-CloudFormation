@@ -1,4 +1,4 @@
-<img src="./images/33e64596-ab46-4516-b9eb-efb65681d0cc.avif" width="900" height="600"/>
+<img src="./images/33e64596-ab46-4516-b9eb-efb65681d0cc.avif" width="600" height="400"/>
 ### AWS Cognito Integration Guide
 
 #### Introduction
@@ -75,7 +75,4 @@ If you encounter any issues or have questions, refer to the AWS Cognito document
 
 Please note that this README provides a general overview of the project setup. Detailed step-by-step instructions and configurations may vary based on your specific use case and AWS setup.
 
-## Credits
-
-This project is based on AWS Cognito for user authentication. The HTML templates are adapted from [source] and customized for this project.
 
