@@ -29,7 +29,7 @@ This project aims to provide user authentication functionality using AWS Cognito
 ## Features
 
 - **User Authentication**: Utilize AWS Cognito's hosted UI to manage user authentication securely.
-- **Custom Domain**: Set up a custom domain, "ivaans," for a more personalized user experience.
+- **Custom Domain**: Set up a custom domain, `"ivaans,"` for a more personalized user experience.
 
 ## Setup
 
@@ -43,7 +43,7 @@ Follow these steps to set up the authentication system and integrate it into you
 
 
 2. **Custom Domain Setup**:
-   - Configure a custom domain named "ivnaas" to provide a branded authentication experience.
+   - Configure a custom domain named `"ivnaas"` to provide a branded authentication experience.
    - Update the necessary DNS records to map your custom domain to the AWS Cognito hosted UI.
 
 3. **HTML Pages Integration**:
