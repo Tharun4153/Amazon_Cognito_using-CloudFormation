@@ -1,4 +1,4 @@
-<img src="./images/33e64596-ab46-4516-b9eb-efb65681d0cc.avif" width="600" height="400"/>
+<img src="./images/33e64596-ab46-4516-b9eb-efb65681d0cc.avif" width="700" height="400"/>
 
 
 ### AWS Cognito Integration Guide
